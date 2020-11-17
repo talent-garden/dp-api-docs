@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - Shell
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='mailto:digital@talentgarden.org?subject=API Access'>Request API access</a>
  
 
 includes:

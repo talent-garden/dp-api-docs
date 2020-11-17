@@ -29,16 +29,10 @@ under the License.
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title><%=  "TalentGarden API " %></title>
-
-    <style media="screen">
-      <%= Rouge::Themes::MonokaiSublimeSlate.render(:scope => '.highlight') %>
-    </style>
-    <style media="print">
-      * {
-        transition:none!important;
-      }
-      <%= Rouge::Themes::Base16::Solarized.render(:scope => '.highlight') %>
+    <title><%= current_page.data.title || "API Documentation" %></title>
+    <%= favicon_tag 'https://s3-eu-west-1.amazonaws.com/tag-public-assets/images/favicon/favicon-32x32.png' %>
+    <style>
+      <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
@@ -46,12 +40,6 @@ under the License.
       <%= javascript_include_tag  "all" %>
     <% else %>
       <%= javascript_include_tag  "all_nosearch" %>
-    <% end %>
-
-    <% if current_page.data.code_clipboard %>
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
     <% end %>
   </head>
 
@@ -90,6 +78,15 @@ under the License.
                 <% h1[:children].each do |h2| %>
                   <li>
                     <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:title] %>"><%= h2[:content] %></a>
+                    <% if h2[:children].length > 0 %>
+                      <ul class="toc-list-h3">
+                      <% h2[:children].each do |h3| %>
+                  <li>
+                    <a href="#<%= h3[:id] %>" class="toc-h3 toc-link" data-title="<%= h3[:content] %>"><%= h3[:content] %></a>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
                   </li>
                 <% end %>
               </ul>
