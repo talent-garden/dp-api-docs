@@ -4,10 +4,6 @@ title: API Reference
 language_tabs: # must be one of https://git.io/vQNgJ
   - Shell
 
-toc_footers:
-  - <a href='mailto:digital@talentgarden.org?subject=API Access'>Request API access</a>
- 
-
 includes:
   - pagination
   - event
