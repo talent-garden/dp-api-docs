@@ -268,6 +268,8 @@
 <p>Welcome to the TalentGarden API! You can use our API to access TalentGarden API endpoints, which can get information on various events and campuses in our database.</p>
 
 <p>We have language bindings in Shell! You can view code examples in the dark area to the right.</p>
+
+<!-- docker run --rm --name ddp-api-docs -p 4567:4567 -v $(pwd)/source:/srv/slate/source slatedocs/slate serve -->
 <h1 id='pagination'>Pagination</h1>
 <p>It is almost never a good idea to return all resources of your database at once. Consequently, you 
 should provide a pagination mechanism. In this case this mechanism is this json object.</p>
@@ -291,22 +293,22 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 </tr>
 </thead><tbody>
 <tr>
-<td>per_page</td>
+<td><code>per_page</code></td>
 <td>integer</td>
 <td>The number of elements in one page.</td>
 </tr>
 <tr>
-<td>page</td>
+<td><code>page</code></td>
 <td>integer</td>
 <td>The current page.</td>
 </tr>
 <tr>
-<td>total_elements</td>
+<td><code>total_elements</code></td>
 <td>integer</td>
 <td>Total number of events.</td>
 </tr>
 <tr>
-<td>total_pages</td>
+<td><code>total_pages</code></td>
 <td>integer</td>
 <td>Total number of pages.</td>
 </tr>
@@ -318,7 +320,7 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 <tr>
 <th>Filed</th>
 <th>Type</th>
-<th>Description</th>
+<th><div style="width:100%">Description</div></th>
 </tr>
 </thead><tbody>
 <tr>
@@ -327,72 +329,72 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 <td>Identify the creator of the event.</td>
 </tr>
 <tr>
-<td>event_name</td>
+<td><code>event_name</code></td>
 <td>string</td>
 <td>Event name</td>
 </tr>
 <tr>
-<td>summary</td>
+<td><code>summary</code></td>
 <td>string</td>
 <td>Event summary. Short summary describing the event and its purpose.</td>
 </tr>
 <tr>
-<td>description</td>
+<td><code>description</code></td>
 <td>string</td>
 <td>Event description. Description can be lengthy and have significant formatting.</td>
 </tr>
 <tr>
-<td>start_utc</td>
+<td><code>start_utc</code></td>
 <td>time-stamp</td>
 <td>Event start, date and time.</td>
 </tr>
 <tr>
-<td>end_utc</td>
+<td><code>end_utc</code></td>
 <td>time-stamp</td>
 <td>Event end, date and time.</td>
 </tr>
 <tr>
-<td>status</td>
+<td><code>status</code></td>
 <td>string</td>
 <td>The status of event is always live.</td>
 </tr>
 <tr>
-<td>online_event</td>
+<td><code>online_event</code></td>
 <td>boolean</td>
 <td>True = Specifies that the Event is online only.</td>
 </tr>
 <tr>
-<td>format_id</td>
+<td><code>format_id</code></td>
 <td>integer</td>
 <td>The Format id represents an Event type, for example seminar, workshop or concert.</td>
 </tr>
 <tr>
-<td>category_id</td>
+<td><code>category_id</code></td>
 <td>integer</td>
 <td>An overarching category that an event falls into (vertical). Examples are “Music”, and “Endurance”.</td>
 </tr>
 <tr>
-<td>subcategory_id</td>
+<td><code>subcategory_id</code></td>
 <td>integer</td>
 <td>A deeper category to describe the event.</td>
 </tr>
 <tr>
-<td>logo_url</td>
+<td><code>logo_url</code></td>
 <td>string</td>
 <td>The url of event&#39;s logo.</td>
 </tr>
 <tr>
-<td>url</td>
+<td><code>url</code></td>
 <td>string</td>
 <td>The url of event enable on eventbrite.</td>
 </tr>
 <tr>
-<td>locale</td>
+<td><code>locale</code></td>
 <td>string</td>
 <td>Specifies the language of the event.</td>
 </tr>
 <tr>
-<td>listed</td>
+<td><code>listed</code></td>
 <td>boolean</td>
 <td>True = Specifies that the Event is public.</td>
 </tr>
@@ -464,24 +466,24 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 </tr>
 </thead><tbody>
 <tr>
-<td>organizer_id</td>
+<td><code>organizer_id</code></td>
 <td>1234567890</td>
 <td>Return only events with specified <code>organizer_id</code>.</td>
 </tr>
 <tr>
-<td>format_id</td>
+<td><code>format_id</code></td>
 <td>1</td>
 <td>Return only events with speecified <code>format_id</code>.</td>
 </tr>
 <tr>
-<td>category_id</td>
+<td><code>category_id</code></td>
 <td>101</td>
 <td>Return only events with speecified <code>category_id</code>.</td>
 </tr>
 <tr>
-<td>sortby</td>
-<td>organizer_id, start</td>
-<td>Return all events sorted by a fields of object.</td>
+<td><code>sortby</code></td>
+<td>organizer_id</td>
+<td>Return all events sorted by the fields of object.</td>
 </tr>
 </tbody></table>
 
