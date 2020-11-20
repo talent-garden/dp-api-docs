@@ -1,6 +1,6 @@
 # Events
 ## Event Object
-An event object contain all of information of a Talent Garden event.
+An event object contain all of informations of a Talent Garden event.
 
 ### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
@@ -23,7 +23,7 @@ An event object contain all of information of a Talent Garden event.
 ## Get All Events
 
 #### HTTP Request
-With this request, it is possible to obtain information on all the new talent garden events.
+With this request you can get all informations about the new talent garden events. <br></br>
 `GET https://api.talentgarden.net/v1/events`
 
 ```shell
@@ -84,6 +84,7 @@ curl "https://api.talentgarden.net/v1/events
 }
 ```
 #### Query Parameters
+You can use this parameter to filter the events or you can sort them.
 
 Parameter | example | Description
 --------- | ------- | --------------
@@ -93,4 +94,4 @@ Parameter | example | Description
 `sortby` | organizer_id | Return all events sorted by the fields of object.|
 
 
-This endpoint retrieves all informations
+
