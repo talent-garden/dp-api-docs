@@ -314,7 +314,7 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 </tr>
 </tbody></table>
 <h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
-<p>An event object contain all of information of a Talent Garden event.</p>
+<p>An event object contain all of informations of a Talent Garden event.</p>
 <h3 id='object-fields'>Object Fields</h3>
 <table><thead>
 <tr>
@@ -400,7 +400,7 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 </tr>
 </tbody></table>
 <h2 id='get-all-events'>Get All Events</h2><h4 id='http-request'>HTTP Request</h4>
-<p>With this request, it is possible to obtain information on all the new talent garden events.
+<p>With this request you can get all informations about the new talent garden events. <br></br>
 <code>GET https://api.talentgarden.net/v1/events</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.net/v1/events
 </span></code></pre></div>
@@ -458,6 +458,8 @@ should provide a pagination mechanism. In this case this mechanism is this json 
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h4 id='query-parameters'>Query Parameters</h4>
+<p>You can use this parameter to filter the events or you can sort them.</p>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -486,8 +488,6 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 <td>Return all events sorted by the fields of object.</td>
 </tr>
 </tbody></table>
-
-<p>This endpoint retrieves all informations</p>
 <h1 id='errors'>Errors</h1>
 <p>When an error occurs during an API request, you will receive:</p>
 
