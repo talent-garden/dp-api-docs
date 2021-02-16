@@ -6,11 +6,11 @@ An booking object contain all of informations of a book.
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `room_id` |    integer   |   Identify the room of the book.|
-| `user_id` | integer |   Identify the user that book a room |
-| `from` |  timestamp with timezone | Date and time of star of book  |
-| `to` |    timestamp with timezone   |   Date and time of finish book |
-| `created_at` | timestamp with timezone | Date and time of book creation |
-| `update_at` |    timestamp with timezone  | Date and time of last update |
+| `user_id` | integer |   Identify the user that book a room. |
+| `from` |  timestamp with timezone | Date and time of star of book.  |
+| `to` |    timestamp with timezone   |   Date and time of finish book. |
+| `created_at` | timestamp with timezone | Date and time of book creation. |
+| `update_at` |    timestamp with timezone  | Date and time of last update. |
 ## Get All Bookings
 
 ### HTTP Request
@@ -89,7 +89,7 @@ curl "https://api.talentgarden.com/v1/bookings/64" \
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the book to retrieve
+id | The id of the book to retrieve.
 
 
 
@@ -120,9 +120,9 @@ curl "https://api.talentgarden.com/v1/bookings" \
 ### Body Parameters
 Parameter | Description
 --------- | -----------
-room_id | The id of the room to book
-from | booking start date and time
-to | booking finish date and time
+room_id | The id of the room to book.
+from | booking start date and time.
+to | booking finish date and time.
 
 
 ## Delete a Specific Booking
@@ -141,5 +141,5 @@ curl "https://api.talentgarden.com/v1/bookings/64" \
 
 Parameter | Description
 --------- | -----------
-id | The id of the book to delete
+id | The id of the book to delete.
 
