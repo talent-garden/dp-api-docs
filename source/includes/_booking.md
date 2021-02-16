@@ -19,7 +19,7 @@ With this request you can get all informations about the all booking. <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/bookings" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 > The above command returns JSON structured like this:
 
@@ -64,7 +64,7 @@ With this request you can get all informations about specific book.  <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/bookings/64" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 
 > The above command returns JSON structured like this:
@@ -103,7 +103,7 @@ With this request you can create a new book.  <br></br>
 curl "https://api.talentgarden.com/v1/bookings" \
       -X POST \
       -d {"room_id": "24","from": "2021-03-09T08:30:00.000Z","to": "2021-03-09T09:30:00.000Z"} \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 ```json
 {
@@ -135,7 +135,7 @@ With this request you can delete a book witth specific id.  <br></br>
 ```shell
 curl "https://api.talentgarden.com/v1/bookings/64" \
       -X DELETE \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 ### URL Parameters
 

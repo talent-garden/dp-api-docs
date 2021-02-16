@@ -21,7 +21,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 > The above command returns JSON structured like this:
 
@@ -76,7 +76,7 @@ With this request you can get all informations about specific book.  <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/rooms/119" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 
 > The above command returns JSON structured like this:

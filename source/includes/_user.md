@@ -25,7 +25,7 @@ With this request you can get all informations about the all users. <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/bookings" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 > The above command returns JSON structured like this:
 
@@ -69,7 +69,7 @@ With this request you can get all informations about own user.  <br></br>
 
 ```shell
 curl "https://api.talentgarden.com/v1/users/me" \
-      -H "Authorization: Bearer"
+      -H "Authorization: Bearer YOUR_JWT"
 ```
 
 > The above command returns JSON structured like this:
