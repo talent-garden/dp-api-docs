@@ -5,4 +5,4 @@
 
 API Documentation
 ------------
-This repository contains the front-end for https://docs.talentgarden.net.
+This repository contains the front-end for https://docs.talentgarden.com.

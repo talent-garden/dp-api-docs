@@ -1,29 +1,29 @@
 # Events
 ## Event Object
-An event object contain all of information of a Talent Garden event.
+An event object contain all of informations of a Talent Garden event.
 
 ### Object Fields
-| Filed    |      Type      |  Description |
-|----------|---------------:|------------:|
-| organizer_id |    integer   |   Identify the creator of the event |
-| event_name | string |   Event name |
-| summary |  string |Event summary. Short summary describing the event and its purpose. |
-| description |    string   |   Event description. Description can be lengthy and have significant formatting. |
-| start_utc | time-stamp  | Event start, date and time |
-| end_utc |    time-stamp   |  Event end, date and time  |
-| status | string | The status of event is always live  |
-| online_event |  boolean | true = Specifies that the Event is online only  |
-| format_id |    integer   |   The Format id represents an Event type, for example seminar, workshop or concert  |
-| category_id | integer |    An overarching category that an event falls into (vertical). Examples are “Music”, and “Endurance”. |
-| subcategory_id| integer| A deeper category to describe the event |
-| logo_url | string  | The url of event's logo  |
-| url |    string   |   The url of event enable on eventbrite |
-| locale | string |  Specifies the language of the event |
-| listed | boolean |  true = Specifies that the Event is public |
+| Filed    |      Type      |  <div style="width:100%">Description</div> |
+|----------|---------------|------------|
+| `organizer_id` |    integer   |   Identify the creator of the event.|
+| `event_name` | string |   Event name |
+| `summary` |  string |Event summary. Short summary describing the event and its purpose. |
+| `description` |    string   |   Event description. Description can be lengthy and have significant formatting. |
+| `start_utc` | time-stamp  | Event start, date and time. |
+| `end_utc` |    time-stamp   |  Event end, date and time. |
+| `status` | string | The status of event is always live.  |
+| `online_event` |  boolean | True = Specifies that the Event is online only.  |
+| `format_id` |    integer   |   The Format id represents an Event type, for example seminar, workshop or concert.  |
+| `category_id` | integer |    An overarching category that an event falls into (vertical). Examples are “Music”, and “Endurance”. |
+| `subcategory_id`| integer| A deeper category to describe the event. |
+| `logo_url` | string  | The url of event's logo.  |
+| `url` |    string   |   The url of event enable on eventbrite. |
+| `locale` | string |  Specifies the language of the event. |
+| `listed` | boolean |  True = Specifies that the Event is public. |
 ## Get All Events
 
 #### HTTP Request
-
+With this request you can get all informations about the new talent garden events. <br></br>
 `GET https://api.talentgarden.net/v1/events`
 
 ```shell
@@ -84,13 +84,14 @@ curl "https://api.talentgarden.net/v1/events
 }
 ```
 #### Query Parameters
+You can use this parameter to filter the events or you can sort them.
 
 Parameter | example | Description
---------- | ------- | -----------
-organizer_id | 1234567890 | Return only events with specified organizer_id
-format_id | 1 | Return only events with speecified format_id
-category_id | 101 | Return only events with speecified category_id
-sortby | organizer_id, start | Return all events sorted by a fields of object |
+--------- | ------- | --------------
+`organizer_id` | 1234567890 | Return only events with specified `organizer_id`.|
+`format_id` | 1 | Return only events with speecified `format_id`.|
+`category_id` | 101 | Return only events with speecified `category_id`.|
+`sortby` | organizer_id | Return all events sorted by the fields of object.|
 
 
-This endpoint retrieves all informations
+
