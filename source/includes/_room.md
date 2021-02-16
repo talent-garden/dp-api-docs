@@ -1,12 +1,12 @@
-# Bookings
-## Booking Object
-An booking object contain all of informations of a book.
+# Rooms
+## Room Object
+An booking object contain all of informations of a room.
 
 ### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
-| `room_id` |    integer   |   Identify the room of the book.|
-| `user_id` | integer |   Identify the user that book a room |
+| `campus_id` |    integer   |   Identify the campus of the room.|
+| `image_url` | string |   Identify the url of image |
 | `from` |  timestamp with timezone | Date and time of star of book  |
 | `to` |    timestamp with timezone   |   Date and time of finish book |
 | `created_at` | timestamp with timezone | Date and time of book creation |
@@ -27,13 +27,15 @@ curl "https://api.talentgarden.com/v1/bookings" \
 {
     "data": [
         {
-            "id": 64,
-            "room_id": "24",
-            "user_id": "11152",
-            "from": "2021-02-26T08:30:00.000Z",
-            "to": "2021-02-26T09:30:00.000Z",
-            "created_at": "2021-02-15T16:14:19.000Z",
-            "updated_at": "2021-02-15T16:14:19.000Z"
+            "id": "119",
+            "campus_id": 53,
+            "image_url": null,
+            "capacity": 8,
+            "name": "Meeting Room Mezzanine",
+            "description": null,
+            "created_at": "2019-06-06T11:55:40.000Z",
+            "updated_at": "2021-02-12T11:02:44.496Z"
+        },
         },
         {
             "id": 75,
@@ -91,55 +93,4 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the book to retrieve
 
-
-
-## Create new Book
-
-### HTTP Request
-With this request you can create a new book.  <br></br>
-`POST https://api.talentgarden.com/v1/bookings`
-
-```shell
-curl "https://api.talentgarden.com/v1/bookings" \
-      -X POST \
-      -d {"room_id": "24","from": "2021-03-09T08:30:00.000Z","to": "2021-03-09T09:30:00.000Z"} \
-      -H "Authorization: Bearer"
-```
-```json
-{
-        "id": 75,
-        "room_id": "24",
-        "user_id": "11152",
-        "from": "2021-03-09T08:30:00.000Z",
-        "to": "2021-03-09T09:30:00.000Z",
-        "created_at": "2021-02-15T17:31:26.000Z",
-        "updated_at": "2021-02-15T17:31:26.000Z"
-}
-```
-
-### Body Parameters
-Parameter | Description
---------- | -----------
-room_id | The id of the room to book
-from | booking start date and time
-to | booking finish date and time
-
-
-## Delete a Specific Booking
-
-### HTTP Request
-With this request you can delete a book witth specific id.  <br></br>
-
-`DELETE https://api.talentgarden.com/v1/bookings/:id`
-
-```shell
-curl "https://api.talentgarden.com/v1/bookings/64" \
-      -X DELETE \
-      -H "Authorization: Bearer"
-```
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-id | The id of the book to delete
 
