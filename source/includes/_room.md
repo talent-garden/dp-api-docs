@@ -12,7 +12,7 @@ An booking object contain all of informations of a room.
 | `description` |    string   |   Description of the room. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
-## Get All Room By Campus Id
+## Get Rooms By Campus Id
 
 ### HTTP Request
 With this request you can get all informations about the all rooms associate with specific campus. <br></br>
@@ -66,7 +66,8 @@ You can use this parameter to filter the bookings or you can sort them.
 
 Parameter | example | Description
 --------- | ------- | --------------
-`campus_id` | 53 | Return only rooms with specified `campus_id`.|
+|`campus_id` | 53 | Return only rooms with specified `campus_id`.|
+| `capacity` | 4 | Return only rooms with capacity 4.|
 
 ## Get Room by id
 
