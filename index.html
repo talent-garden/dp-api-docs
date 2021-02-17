@@ -315,7 +315,7 @@
               </ul>
                   </li>
                   <li>
-                    <a href="#get-all-room-by-campus-id" class="toc-h2 toc-link" data-title="Get All Room By Campus Id">Get All Room By Campus Id</a>
+                    <a href="#get-rooms-by-campus-id" class="toc-h2 toc-link" data-title="Get Rooms By Campus Id">Get Rooms By Campus Id</a>
                       <ul class="toc-list-h3">
                   <li>
                     <a href="#http-request" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
@@ -598,8 +598,8 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 </thead><tbody>
 <tr>
 <td><code>room_id</code></td>
-<td>24</td>
-<td>Return only bookings with specified <code>room_id</code>.</td>
+<td>24 or 24,25,26</td>
+<td>Return only bookings with specified <code>room_id</code> or multiple <code>room_id</code>.</td>
 </tr>
 <tr>
 <td><code>user_id</code></td>
@@ -747,7 +747,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>Date and time of last update.</td>
 </tr>
 </tbody></table>
-<h2 id='get-all-room-by-campus-id'>Get All Room By Campus Id</h2><h3 id='http-request'>HTTP Request</h3>
+<h2 id='get-rooms-by-campus-id'>Get Rooms By Campus Id</h2><h3 id='http-request'>HTTP Request</h3>
 <p>With this request you can get all informations about the all rooms associate with specific campus. <br></br>
 The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <code>GET https://api.talentgarden.com/v1/rooms?campus_id</code></p>
@@ -805,6 +805,11 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <td><code>campus_id</code></td>
 <td>53</td>
 <td>Return only rooms with specified <code>campus_id</code>.</td>
+</tr>
+<tr>
+<td><code>capacity</code></td>
+<td>4</td>
+<td>Return only rooms with capacity 4.</td>
 </tr>
 </tbody></table>
 <h2 id='get-room-by-id'>Get Room by id</h2><h3 id='http-request-2'>HTTP Request</h3>
