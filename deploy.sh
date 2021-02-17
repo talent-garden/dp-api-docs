@@ -20,6 +20,7 @@ Options:
 
 run_build() {
   docker run --rm -v $PWD:/usr/src/app/source -w /usr/src/app/source slate bundle exec middleman build --clean
+  echo docs.talentgarden.com > ./build/CNAME
 }
 
 parse_args() {
