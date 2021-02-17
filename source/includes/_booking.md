@@ -52,7 +52,7 @@ You can use this parameter to filter the bookings or you can sort them.
 
 Parameter | example | Description
 --------- | ------- | --------------
-`room_id` | 24 | Return only bookings with specified `room_id`.|
+`room_id` | 24 or 24,25,26 | Return only bookings with specified `room_id` or multiple `room_id`.|
 `user_id` | 1 | Return only bookings with speecified `user_id`.|
 `sortby` | from | Return all bookings sorted by the fields of object.|
 
