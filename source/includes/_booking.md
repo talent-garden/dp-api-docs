@@ -54,6 +54,8 @@ Parameter | example | Description
 --------- | ------- | --------------
 `room_id` | 24 or 24,25,26 | Return only bookings with specified `room_id` or multiple `room_id`.|
 `user_id` | 1 | Return only bookings with speecified `user_id`.|
+`from`    | 2021-11-25T08:00:00.000Z | Return all bookings grater or equal of parameter
+`to`      | 2021-11-25T08:00:00.000Z | Return all bookings less or equal of parameter
 `sortby` | from | Return all bookings sorted by the fields of object.|
 
 ## Get Booking by id
