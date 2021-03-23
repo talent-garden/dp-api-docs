@@ -318,7 +318,7 @@
                     <a href="#get-rooms-by-campus-id" class="toc-h2 toc-link" data-title="Get Rooms By Campus Id">Get Rooms By Campus Id</a>
                       <ul class="toc-list-h3">
                   <li>
-                    <a href="#http-request" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-rooms-request" class="toc-h3 toc-link" data-title="HTTP Rooms Request">HTTP Rooms Request</a>
                   </li>
                   <li>
                     <a href="#query-parameters" class="toc-h3 toc-link" data-title="Query Parameters">Query Parameters</a>
@@ -329,7 +329,7 @@
                     <a href="#get-room-by-id" class="toc-h2 toc-link" data-title="Get Room by id">Get Room by id</a>
                       <ul class="toc-list-h3">
                   <li>
-                    <a href="#http-request-2" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-rooms-request-2" class="toc-h3 toc-link" data-title="HTTP Rooms Request">HTTP Rooms Request</a>
                   </li>
                   <li>
                     <a href="#url-parameters" class="toc-h3 toc-link" data-title="URL Parameters">URL Parameters</a>
@@ -353,7 +353,7 @@
                     <a href="#get-all-users" class="toc-h2 toc-link" data-title="Get All Users">Get All Users</a>
                       <ul class="toc-list-h3">
                   <li>
-                    <a href="#http-request" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-users-request" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
                   </li>
                   <li>
                     <a href="#query-parameters" class="toc-h3 toc-link" data-title="Query Parameters">Query Parameters</a>
@@ -364,7 +364,7 @@
                     <a href="#get-own-user-information" class="toc-h2 toc-link" data-title="Get Own User Information">Get Own User Information</a>
                       <ul class="toc-list-h3">
                   <li>
-                    <a href="#http-request-2" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-users-request-2" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
                   </li>
               </ul>
                   </li>
@@ -372,7 +372,7 @@
                     <a href="#update-user-information" class="toc-h2 toc-link" data-title="Update User Information">Update User Information</a>
                       <ul class="toc-list-h3">
                   <li>
-                    <a href="#http-request-3" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-users-request-3" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
                   </li>
                   <li>
                     <a href="#body-parameters" class="toc-h3 toc-link" data-title="Body Parameters">Body Parameters</a>
@@ -771,7 +771,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>Date and time of last update.</td>
 </tr>
 </tbody></table>
-<h2 id='get-rooms-by-campus-id'>Get Rooms By Campus Id</h2><h3 id='http-request'>HTTP Request</h3>
+<h2 id='get-rooms-by-campus-id'>Get Rooms By Campus Id</h2><h3 id='http-rooms-request'>HTTP Rooms Request</h3>
 <p>With this request you can get all informations about the all rooms associate with specific campus. <br></br>
 The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <code>GET https://api.talentgarden.com/v1/rooms?campus_id</code></p>
@@ -836,7 +836,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <td>Return only rooms with capacity 4.</td>
 </tr>
 </tbody></table>
-<h2 id='get-room-by-id'>Get Room by id</h2><h3 id='http-request-2'>HTTP Request</h3>
+<h2 id='get-room-by-id'>Get Room by id</h2><h3 id='http-rooms-request-2'>HTTP Rooms Request</h3>
 <p>With this request you can get all informations about specific book.  <br></br>
 <code>GET https://api.talentgarden.com/v1/rooms/:id</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/rooms/119"</span> <span class="se">\</span>
@@ -938,7 +938,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <td>True if the user was deleted.</td>
 </tr>
 </tbody></table>
-<h2 id='get-all-users'>Get All Users</h2><h3 id='http-request'>HTTP Request</h3>
+<h2 id='get-all-users'>Get All Users</h2><h3 id='http-users-request'>HTTP Users Request</h3>
 <p>With this request you can get all informations about the all users. <br></br>
 <code>GET https://api.talentgarden.com/v1/users</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/bookings"</span> <span class="se">\</span>
@@ -1002,7 +1002,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 <td>Return all bookings sorted by the fields of object.</td>
 </tr>
 </tbody></table>
-<h2 id='get-own-user-information'>Get Own User Information</h2><h3 id='http-request-2'>HTTP Request</h3>
+<h2 id='get-own-user-information'>Get Own User Information</h2><h3 id='http-users-request-2'>HTTP Users Request</h3>
 <p>With this request you can get all informations about own user.  <br></br>
 <code>GET https://api.talentgarden.com/v1/users/me</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/me"</span> <span class="se">\</span>
@@ -1025,7 +1025,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"deleted"</span><span class="p">:</span><span class="kc">false</span><span class="w">
       </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='update-user-information'>Update User Information</h2><h3 id='http-request-3'>HTTP Request</h3>
+</span></code></pre></div><h2 id='update-user-information'>Update User Information</h2><h3 id='http-users-request-3'>HTTP Users Request</h3>
 <p>With this request you can get all informations about own user.  <br></br>
 <code>PATCH https://api.talentgarden.com/v1/users/:id</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/:id"</span> <span class="se">\</span>
