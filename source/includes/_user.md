@@ -19,7 +19,7 @@ An user object contain all of informations of a user.
 | `deleted` | boolean | True if the user was deleted. |
 ## Get All Users
 
-### HTTP Request
+### HTTP Users Request
 With this request you can get all informations about the all users. <br></br>
 `GET https://api.talentgarden.com/v1/users`
 
@@ -63,7 +63,7 @@ Parameter | example | Description
 
 ## Get Own User Information
 
-### HTTP Request
+### HTTP Users Request
 With this request you can get all informations about own user.  <br></br>
 `GET https://api.talentgarden.com/v1/users/me`
 
@@ -93,7 +93,7 @@ curl "https://api.talentgarden.com/v1/users/me" \
 
 ## Update User Information
 
-### HTTP Request
+### HTTP Users Request
 With this request you can get all informations about own user.  <br></br>
 `PATCH https://api.talentgarden.com/v1/users/:id`
 
@@ -113,4 +113,5 @@ Parameter | example |
 `phoneNumber` | +39123456789 | 
 `password` | 123456789 |
 
-*Attention*: to update user's passwords it is necessary that the password field is the only one present in the body
+### *Attention*:
+to update user's passwords it is necessary that the password field is the only one present in the body

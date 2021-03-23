@@ -12,9 +12,10 @@ An booking object contain all of informations of a room.
 | `description` |    string   |   Description of the room. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
+
 ## Get Rooms By Campus Id
 
-### HTTP Request
+### HTTP Rooms Request
 With this request you can get all informations about the all rooms associate with specific campus. <br></br>
 The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
 `GET https://api.talentgarden.com/v1/rooms?campus_id`
@@ -71,7 +72,7 @@ Parameter | example | Description
 
 ## Get Room by id
 
-### HTTP Request
+### HTTP Rooms Request
 With this request you can get all informations about specific book.  <br></br>
 `GET https://api.talentgarden.com/v1/rooms/:id`
 
