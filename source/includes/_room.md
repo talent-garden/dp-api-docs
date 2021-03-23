@@ -96,7 +96,7 @@ curl "https://api.talentgarden.com/v1/rooms/119" \
 }
 ```
 
-### URL Parameters
+### URL Rooms Parameters
 
 Parameter | Description
 --------- | -----------
