@@ -51,7 +51,7 @@ curl "https://api.talentgarden.com/v1/bookings" \
 }
 ```
 ### Query Parameters
-You can use this parameter to filter the bookings or you can sort them.
+You can use this parameter to filter the users or you can sort them.
 
 Parameter | example | Description
 --------- | ------- | --------------
@@ -91,5 +91,26 @@ curl "https://api.talentgarden.com/v1/users/me" \
       }
 ```
 
+## Update User Information
 
+### HTTP Request
+With this request you can get all informations about own user.  <br></br>
+`PATCH https://api.talentgarden.com/v1/users/:id`
 
+```shell
+curl "https://api.talentgarden.com/v1/users/:id" \
+      -H "Authorization: Bearer YOUR_JWT"
+```
+
+### Body Parameters
+You can use this parameter to update data of specific user.
+
+Parameter | example | 
+--------- | ------- |
+`name` | mario | 
+`surname` | rossi |
+`email` | mariorossi@tag.it| 
+`phoneNumber` | +39123456789 | 
+`password` | 123456789 |
+
+*Attention*: to update user's passwords it is necessary that the password field is the only one present in the body
