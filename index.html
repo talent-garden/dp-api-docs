@@ -368,6 +368,17 @@
                   </li>
               </ul>
                   </li>
+                  <li>
+                    <a href="#update-user-information" class="toc-h2 toc-link" data-title="Update User Information">Update User Information</a>
+                      <ul class="toc-list-h3">
+                  <li>
+                    <a href="#http-request-3" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#body-parameters" class="toc-h3 toc-link" data-title="Body Parameters">Body Parameters</a>
+                  </li>
+              </ul>
+                  </li>
               </ul>
           </li>
           <li>
@@ -953,7 +964,7 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='query-parameters'>Query Parameters</h3>
-<p>You can use this parameter to filter the bookings or you can sort them.</p>
+<p>You can use this parameter to filter the users or you can sort them.</p>
 
 <table><thead>
 <tr>
@@ -1011,7 +1022,44 @@ The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"deleted"</span><span class="p">:</span><span class="kc">false</span><span class="w">
       </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
+</span></code></pre></div><h2 id='update-user-information'>Update User Information</h2><h3 id='http-request-3'>HTTP Request</h3>
+<p>With this request you can get all informations about own user.  <br></br>
+<code>PATCH https://api.talentgarden.com/v1/users/:id</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/:id"</span> <span class="se">\</span>
+      <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
+</code></pre></div><h3 id='body-parameters'>Body Parameters</h3>
+<p>You can use this parameter to update data of specific user.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>name</code></td>
+<td>mario</td>
+</tr>
+<tr>
+<td><code>surname</code></td>
+<td>rossi</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>mariorossi@tag.it</td>
+</tr>
+<tr>
+<td><code>phoneNumber</code></td>
+<td>+39123456789</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>123456789</td>
+</tr>
+</tbody></table>
+
+<p><em>Attention</em>: to update user&#39;s passwords it is necessary that the password field is the only one present in the body</p>
+<h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
 <p>An event object contain all of informations of a Talent Garden event.</p>
 <h3 id='object-fields'>Object Fields</h3>
 <table><thead>
