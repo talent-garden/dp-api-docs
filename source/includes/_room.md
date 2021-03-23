@@ -12,6 +12,7 @@ An booking object contain all of informations of a room.
 | `description` |    string   |   Description of the room. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
+
 ## Get Rooms By Campus Id
 
 ### HTTP Request

@@ -113,4 +113,5 @@ Parameter | example |
 `phoneNumber` | +39123456789 | 
 `password` | 123456789 |
 
-*Attention*: to update user's passwords it is necessary that the password field is the only one present in the body
+### *Attention*:
+to update user's passwords it is necessary that the password field is the only one present in the body
