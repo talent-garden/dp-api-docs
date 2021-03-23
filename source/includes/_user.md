@@ -50,7 +50,7 @@ curl "https://api.talentgarden.com/v1/bookings" \
     ]
 }
 ```
-### Query Parameters
+### Query Users Parameters
 You can use this parameter to filter the users or you can sort them.
 
 Parameter | example | Description
@@ -102,7 +102,7 @@ curl "https://api.talentgarden.com/v1/users/:id" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 
-### Body Parameters
+### Body Users Parameters
 You can use this parameter to update data of specific user.
 
 Parameter | example | 

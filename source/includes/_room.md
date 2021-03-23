@@ -62,7 +62,7 @@ curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
     ]
 }
 ```
-### Query Parameters
+### Query Rooms Parameters
 You can use this parameter to filter the bookings or you can sort them.
 
 Parameter | example | Description
