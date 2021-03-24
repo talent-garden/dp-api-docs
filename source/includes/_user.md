@@ -110,8 +110,9 @@ Parameter | example |
 `name` | mario | 
 `surname` | rossi |
 `email` | mariorossi@tag.it| 
-`phoneNumber` | +39123456789 | 
-`password` | 123456789 |
+`prefixNumber` | +39 | 
+`phoneNumber` | 3391029463 | 
+`password` | 123456#„«#“‘#789 |
 
 ### *Attention*:
-to update user's passwords it is necessary that the password field is the only one present in the body
+to update user's passwords it is necessary that the email field is not present.
