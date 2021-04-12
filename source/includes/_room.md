@@ -1,6 +1,6 @@
 # Rooms
 ## Room Object
-An booking object contain all of informations of a room.
+An booking object contain all of information of a room.
 
 ### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
@@ -12,16 +12,20 @@ An booking object contain all of informations of a room.
 | `description` |    string   |   Description of the room. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
+| `floor`| integer| Floor number|
+|`privacy_level`| string | level of privacy inside the room|
+|`services`| json | Features room |
+|`available`| boolean | Status of room |
 
 ## Get Rooms By Campus Id
 
 ### HTTP Rooms Request
-With this request you can get all informations about the all rooms associate with specific campus. <br></br>
-The <b>campus_id</b> is <b>mandatory</b>.  <br></br>
-`GET https://api.talentgarden.com/v1/rooms?campus_id`
+With this request you can get all information about the all rooms associate with specific campus. <br></br>
+Return ***only available*** rooms <br></br> 
+`GET https://api.talentgarden.com/v1/rooms`
 
 ```shell
-curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
+curl "https://api.talentgarden.com/v1/rooms" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 > The above command returns JSON structured like this:
@@ -37,7 +41,18 @@ curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
             "name": "Meeting Room Mezzanine",
             "description": null,
             "created_at": "2019-06-06T11:55:40.000Z",
-            "updated_at": "2021-02-12T11:02:44.496Z"
+            "updated_at": "2021-02-12T11:02:44.496Z",
+            "floor": 0,
+            "privacy_level": "Private",
+            "services": {
+                "natural_light": "FALSE",
+                "hdmi_cable": "FALSE",
+                "air_conditioned": "TRUE",
+                "socket": "TRUE",
+                "whiteboard": "FALSE",
+                "monitor": "43"
+            },
+            "available": true
         },
         {
             "id": "120",
@@ -47,7 +62,8 @@ curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
             "name": "Meeting Room Floor 2",
             "description": null,
             "created_at": "2019-06-06T12:01:44.000Z",
-            "updated_at": "2021-02-12T11:02:44.496Z"
+            "updated_at": "2021-02-12T11:02:44.496Z",
+            ...
         },
         {
             "id": "121",
@@ -57,7 +73,8 @@ curl "https://api.talentgarden.com/v1/rooms?campus_id=53" \
             "name": "Meeting Room Floor 3",
             "description": null,
             "created_at": "2019-06-06T12:08:11.000Z",
-            "updated_at": "2021-02-12T11:02:44.496Z"
+            "updated_at": "2021-02-12T11:02:44.496Z",
+            ...
         }
     ]
 }
@@ -73,7 +90,7 @@ Parameter | example | Description
 ## Get Room by id
 
 ### HTTP Rooms Request
-With this request you can get all informations about specific book.  <br></br>
+With this request you can get all information about specific book.  <br></br>
 `GET https://api.talentgarden.com/v1/rooms/:id`
 
 ```shell
@@ -92,7 +109,18 @@ curl "https://api.talentgarden.com/v1/rooms/119" \
     "name": "Meeting Room Mezzanine",
     "description": null,
     "created_at": "2019-06-06T11:55:40.000Z",
-    "updated_at": "2021-02-12T11:02:44.496Z"
+    "updated_at": "2021-02-12T11:02:44.496Z",
+    "floor": 0,
+    "privacy_level": "Private",
+    "services": {
+        "natural_light": "FALSE",
+        "hdmi_cable": "FALSE",
+        "air_conditioned": "TRUE",
+        "socket": "TRUE",
+        "whiteboard": "FALSE",
+        "monitor": "43"
+    },
+    "available": true
 }
 ```
 
