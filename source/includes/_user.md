@@ -20,7 +20,7 @@ An user object contain all of informations of a user.
 ## Get All Users
 
 ### HTTP Users Request
-With this request you can get all informations about the all users. <br></br>
+With this request you can get all informations about the all users.<br></br> **Only admin can use this endpoint+** <br></br>
 `GET https://api.talentgarden.com/v1/users`
 
 ```shell
@@ -94,7 +94,8 @@ curl "https://api.talentgarden.com/v1/users/me" \
 ## Update User Information
 
 ### HTTP Users Request
-With this request you can get all informations about own user.  <br></br>
+With this request you can get all information about specific user.
+  <br></br>
 `PATCH https://api.talentgarden.com/v1/users/:id`
 
 ```shell
