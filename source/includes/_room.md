@@ -50,7 +50,7 @@ curl "https://api.talentgarden.com/v1/rooms" \
                 "air_conditioned": false,
                 "socket": true,
                 "whiteboard": false,
-                "monitor": 43
+                "monitor": "43"
             },
             "available": true
         },
