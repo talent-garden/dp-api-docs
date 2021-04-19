@@ -45,12 +45,12 @@ curl "https://api.talentgarden.com/v1/rooms" \
             "floor": 0,
             "privacy_level": "Private",
             "services": {
-                "natural_light": "FALSE",
-                "hdmi_cable": "FALSE",
-                "air_conditioned": "TRUE",
-                "socket": "TRUE",
-                "whiteboard": "FALSE",
-                "monitor": "43"
+                "natural_light": false,
+                "hdmi_cable": true,
+                "air_conditioned": false,
+                "socket": true,
+                "whiteboard": false,
+                "monitor": 43
             },
             "available": true
         },
