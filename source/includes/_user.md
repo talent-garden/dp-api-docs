@@ -108,11 +108,11 @@ You can use this parameter to update data of specific user.
 
 Parameter | example | 
 --------- | ------- |
-`name` | mario | 
-`surname` | rossi |
+`first_name` | mario | 
+`last_name` | rossi |
 `email` | mariorossi@tag.it| 
-`prefixNumber` | +39 | 
-`phoneNumber` | 3391029463 | 
+`prefix_number` | +39 | 
+`phone_number` | 3391029463 | 
 `password` | 123456#„«#“‘#789 |
 
 ### *Attention*:
