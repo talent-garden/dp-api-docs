@@ -117,3 +117,56 @@ Parameter | example |
 
 ### *Attention*:
 to update user's passwords it is necessary that the email field is not present.
+
+
+## Insert new User's Device Information
+
+### HTTP Users Request
+With this request you can insert new user's device.
+  <br></br>
+`POST https://api.talentgarden.com/v1/users/devices`
+
+```shell
+curl "https://api.talentgarden.com/v1/users/devices" \
+      -H "Authorization: Bearer YOUR_JWT"
+      --data "token": "sdkalsfkhalsfhjalncaukeab","manufacturer": "OnePlus","mac_address": "P1:28:57:13:J2:C4","model": "ONEPLUS A5000","product": "OnePlus5", "platform": "Android"}
+```
+
+### Body Device Parameters
+You can use this parameter to insert data of specific device.
+
+Parameter | example | 
+--------- | ------- |
+`token`| sdkalsfkhalsfhjalncaukeabkcjabfkauevbaevkauefkaubvclaevbleaivbalv,
+`manufacturer`| OnePlus|
+`mac_address`| XX:XS:11:11:X1:X1|
+`model`| ONEPLUS A5000|
+`product`| OnePlus5|
+`platform`| Android |
+
+## Get Own Devices Information
+
+### HTTP Devices Request
+With this request you can get all information about own devices.  <br></br>
+`GET https://api.talentgarden.com/v1/users/devices`
+
+```shell
+curl "https://api.talentgarden.com/v1/users/devices" \
+      -H "Authorization: Bearer YOUR_JWT"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+        "id": 1,
+        "user_id": "11152",
+        "token": "sdkalsfkhalsfhjalncaukeabkcjv",
+        "manufacturer": "Iphone XX",
+        "mac_address": "c6:00:00:00:f2:c4",
+        "model": "XX",
+        "product": "OnePlus5",
+        "platform": "IOS",
+        "created_at": "2021-04-28T07:59:04.146Z"
+    }
+```
