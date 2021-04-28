@@ -1002,7 +1002,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 </tr>
 </tbody></table>
 <h2 id='get-all-users'>Get All Users</h2><h3 id='http-users-request'>HTTP Users Request</h3>
-<p>With this request you can get all informations about the all users.<br></br> <strong>Only admin can use this endpoint+</strong> <br></br>
+<p>With this request you can get all informations about the all users.<br></br> <strong>Only admin can use this endpoint</strong> <br></br>
 <code>GET https://api.talentgarden.com/v1/users</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/bookings"</span> <span class="se">\</span>
       <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
@@ -1171,6 +1171,8 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>Android</td>
 </tr>
 </tbody></table>
+
+<p>The <strong>mac_address</strong> parameter is <strong>mandatory</strong></p>
 <h2 id='get-own-devices-information'>Get Own Devices Information</h2><h3 id='http-devices-request'>HTTP Devices Request</h3>
 <p>With this request you can get all information about own devices.  <br></br>
 <code>GET https://api.talentgarden.com/v1/users/devices</code></p>
