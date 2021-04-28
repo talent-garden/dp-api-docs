@@ -20,7 +20,7 @@ An user object contain all of informations of a user.
 ## Get All Users
 
 ### HTTP Users Request
-With this request you can get all informations about the all users.<br></br> **Only admin can use this endpoint+** <br></br>
+With this request you can get all informations about the all users.<br></br> **Only admin can use this endpoint** <br></br>
 `GET https://api.talentgarden.com/v1/users`
 
 ```shell
@@ -143,6 +143,8 @@ Parameter | example |
 `model`| ONEPLUS A5000|
 `product`| OnePlus5|
 `platform`| Android |
+
+The **mac_address** parameter is **mandatory**
 
 ## Get Own Devices Information
 
