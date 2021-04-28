@@ -382,6 +382,25 @@
                   </li>
               </ul>
                   </li>
+                  <li>
+                    <a href="#insert-new-user-39-s-device-information" class="toc-h2 toc-link" data-title="Insert new User's Device Information">Insert new User's Device Information</a>
+                      <ul class="toc-list-h3">
+                  <li>
+                    <a href="#http-users-request-4" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
+                  </li>
+                  <li>
+                    <a href="#body-device-parameters" class="toc-h3 toc-link" data-title="Body Device Parameters">Body Device Parameters</a>
+                  </li>
+              </ul>
+                  </li>
+                  <li>
+                    <a href="#get-own-devices-information" class="toc-h2 toc-link" data-title="Get Own Devices Information">Get Own Devices Information</a>
+                      <ul class="toc-list-h3">
+                  <li>
+                    <a href="#http-devices-request" class="toc-h3 toc-link" data-title="HTTP Devices Request">HTTP Devices Request</a>
+                  </li>
+              </ul>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1111,7 +1130,68 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 </tbody></table>
 <h3 id='attention'><em>Attention</em>:</h3>
 <p>to update user&#39;s passwords it is necessary that the email field is not present.</p>
-<h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
+<h2 id='insert-new-user-39-s-device-information'>Insert new User&#39;s Device Information</h2><h3 id='http-users-request-4'>HTTP Users Request</h3>
+<p>With this request you can insert new user&#39;s device.
+  <br></br>
+<code>POST https://api.talentgarden.com/v1/users/devices</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/devices"</span> <span class="se">\</span>
+      <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
+      <span class="nt">--data</span> <span class="s2">"token"</span>: <span class="s2">"sdkalsfkhalsfhjalncaukeab"</span>,<span class="s2">"manufacturer"</span>: <span class="s2">"OnePlus"</span>,<span class="s2">"mac_address"</span>: <span class="s2">"P1:28:57:13:J2:C4"</span>,<span class="s2">"model"</span>: <span class="s2">"ONEPLUS A5000"</span>,<span class="s2">"product"</span>: <span class="s2">"OnePlus5"</span>, <span class="s2">"platform"</span>: <span class="s2">"Android"</span><span class="o">}</span>
+</code></pre></div><h3 id='body-device-parameters'>Body Device Parameters</h3>
+<p>You can use this parameter to insert data of specific device.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>token</code></td>
+<td>sdkalsfkhalsfhjalncaukeabkcjabfkauevbaevkauefkaubvclaevbleaivbalv,</td>
+</tr>
+<tr>
+<td><code>manufacturer</code></td>
+<td>OnePlus</td>
+</tr>
+<tr>
+<td><code>mac_address</code></td>
+<td>XX:XS:11:11:X1:X1</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>ONEPLUS A5000</td>
+</tr>
+<tr>
+<td><code>product</code></td>
+<td>OnePlus5</td>
+</tr>
+<tr>
+<td><code>platform</code></td>
+<td>Android</td>
+</tr>
+</tbody></table>
+<h2 id='get-own-devices-information'>Get Own Devices Information</h2><h3 id='http-devices-request'>HTTP Devices Request</h3>
+<p>With this request you can get all information about own devices.  <br></br>
+<code>GET https://api.talentgarden.com/v1/users/devices</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/devices"</span> <span class="se">\</span>
+      <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11152"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdkalsfkhalsfhjalncaukeabkcjv"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iphone XX"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mac_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6:00:00:00:f2:c4"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XX"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"product"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OnePlus5"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IOS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-04-28T07:59:04.146Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
 <p>An event object contain all of informations of a Talent Garden event.</p>
 <h3 id='object-fields'>Object Fields</h3>
 <table><thead>
