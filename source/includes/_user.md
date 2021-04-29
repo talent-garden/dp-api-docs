@@ -160,15 +160,17 @@ curl "https://api.talentgarden.com/v1/users/devices" \
 > The above command returns JSON structured like this:
 
 ```json
-{
-        "id": 1,
-        "user_id": "11152",
-        "token": "sdkalsfkhalsfhjalncaukeabkcjv",
-        "manufacturer": "Iphone XX",
-        "mac_address": "c6:00:00:00:f2:c4",
-        "model": "XX",
-        "product": "OnePlus5",
-        "platform": "IOS",
-        "created_at": "2021-04-28T07:59:04.146Z"
-    }
+[
+      {
+            "id": 1,
+            "user_id": "11152",
+            "token": "sdkalsfkhalsfhjalncaukeabkcjv",
+            "manufacturer": "Iphone XX",
+            "mac_address": "c6:00:00:00:f2:c4",
+            "model": "XX",
+            "product": "OnePlus5",
+            "platform": "IOS",
+            "created_at": "2021-04-28T07:59:04.146Z"
+      }
+]
 ```
