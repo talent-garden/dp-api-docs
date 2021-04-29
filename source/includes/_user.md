@@ -111,7 +111,7 @@ Parameter | example |
 `first_name` | mario | 
 `last_name` | rossi |
 `email` | mariorossi@tag.it| 
-`prefix_number` | +39 | 
+`phone_prefix` | +39 | 
 `phone_number` | 3391029463 | 
 `password` | 123456#„«#“‘#789 |
 
