@@ -87,7 +87,6 @@ curl "https://api.talentgarden.com/v1/users/me" \
         "created_at":"2014-10-08T10:20:10.000Z",
         "updated_at":"2020-11-16T12:15:42.889Z",
         "date_of_birth":"1984-08-28T00:00:00.000Z",
-        "deleted":false
       }
 ```
 
