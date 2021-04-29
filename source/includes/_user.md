@@ -119,7 +119,7 @@ Parameter | example |
 to update user's passwords it is necessary that the email field is not present.
 
 
-## Insert new User's Device Information
+## Insert Device
 
 ### HTTP Users Request
 With this request you can insert new user's device.
@@ -146,7 +146,7 @@ Parameter | example |
 
 The **mac_address** parameter is **mandatory**
 
-## Get Own Devices Information
+## Get Devices Information
 
 ### HTTP Devices Request
 With this request you can get all information about own devices.  <br></br>
