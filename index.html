@@ -1082,7 +1082,6 @@ Return <strong><em>only available</em></strong> rooms <br></br>
         </span><span class="nl">"created_at"</span><span class="p">:</span><span class="s2">"2014-10-08T10:20:10.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2020-11-16T12:15:42.889Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"deleted"</span><span class="p">:</span><span class="kc">false</span><span class="w">
       </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h2 id='update-user-information'>Update User Information</h2><h3 id='http-users-request-3'>HTTP Users Request</h3>
 <p>With this request you can get all information about specific user.
@@ -1112,7 +1111,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>mariorossi@tag.it</td>
 </tr>
 <tr>
-<td><code>prefix_number</code></td>
+<td><code>phone_prefix</code></td>
 <td>+39</td>
 </tr>
 <tr>
@@ -1176,19 +1175,21 @@ Return <strong><em>only available</em></strong> rooms <br></br>
       <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>The above command returns Array structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11152"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdkalsfkhalsfhjalncaukeabkcjv"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iphone XX"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"mac_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6:00:00:00:f2:c4"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XX"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"product"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OnePlus5"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IOS"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-04-28T07:59:04.146Z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11152"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdkalsfkhalsfhjalncaukeabkcjv"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"manufacturer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iphone XX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"mac_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6:00:00:00:f2:c4"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"product"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OnePlus5"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IOS"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-04-28T07:59:04.146Z"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre></div><h1 id='events'>Events</h1><h2 id='event-object'>Event Object</h2>
 <p>An event object contain all of informations of a Talent Garden event.</p>
 <h3 id='object-fields'>Object Fields</h3>
