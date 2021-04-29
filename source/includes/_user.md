@@ -157,7 +157,7 @@ curl "https://api.talentgarden.com/v1/users/devices" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 
-> The above command returns JSON structured like this:
+> The above command returns Array structured like this:
 
 ```json
 [
