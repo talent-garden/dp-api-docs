@@ -369,7 +369,7 @@
               </ul>
                   </li>
                   <li>
-                    <a href="#update-user-information" class="toc-h2 toc-link" data-title="Update User Information">Update User Information</a>
+                    <a href="#insert-new-user" class="toc-h2 toc-link" data-title="Insert new User">Insert new User</a>
                       <ul class="toc-list-h3">
                   <li>
                     <a href="#http-users-request-3" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
@@ -383,10 +383,24 @@
               </ul>
                   </li>
                   <li>
-                    <a href="#insert-device" class="toc-h2 toc-link" data-title="Insert Device">Insert Device</a>
+                    <a href="#update-user-information" class="toc-h2 toc-link" data-title="Update User Information">Update User Information</a>
                       <ul class="toc-list-h3">
                   <li>
                     <a href="#http-users-request-4" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
+                  </li>
+                  <li>
+                    <a href="#body-users-parameters-2" class="toc-h3 toc-link" data-title="Body Users Parameters">Body Users Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#attention-2" class="toc-h3 toc-link" data-title="<em>Attention</em>:"><em>Attention</em>:</a>
+                  </li>
+              </ul>
+                  </li>
+                  <li>
+                    <a href="#insert-device" class="toc-h2 toc-link" data-title="Insert Device">Insert Device</a>
+                      <ul class="toc-list-h3">
+                  <li>
+                    <a href="#http-users-request-5" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
                   </li>
                   <li>
                     <a href="#body-device-parameters" class="toc-h3 toc-link" data-title="Body Device Parameters">Body Device Parameters</a>
@@ -1043,26 +1057,31 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <tr>
 <td><code>email</code></td>
 <td>mariorossi@tag.it</td>
-<td>Return only user with speecified <code>email</code>.</td>
+<td>Return only user with specified <code>email</code>.</td>
 </tr>
 <tr>
 <td><code>full_name</code></td>
 <td>mario rossi</td>
-<td>Return only user with speecified <code>full_name</code>.</td>
+<td>Return only user with specified <code>full_name</code>.</td>
 </tr>
 <tr>
 <td><code>only_with_phone</code></td>
 <td>true</td>
-<td>return only users with phone_numebr different from null.</td>
+<td>return only users with phone_number different from null.</td>
 </tr>
 <tr>
-<td><code>sortby</code></td>
+<td><code>sort_by</code></td>
+<td>from</td>
+<td>Return all bookings sorted by the fields of object.</td>
+</tr>
+<tr>
+<td><code>sort_by_desc</code></td>
 <td>from</td>
 <td>Return all bookings sorted by the fields of object.</td>
 </tr>
 </tbody></table>
 <h2 id='get-own-user-information'>Get Own User Information</h2><h3 id='http-users-request-2'>HTTP Users Request</h3>
-<p>With this request you can get all informations about own user.  <br></br>
+<p>With this request you can get all information about own user.  <br></br>
 <code>GET https://api.talentgarden.com/v1/users/me</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/me"</span> <span class="se">\</span>
       <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
@@ -1083,13 +1102,53 @@ Return <strong><em>only available</em></strong> rooms <br></br>
         </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2020-11-16T12:15:42.889Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='update-user-information'>Update User Information</h2><h3 id='http-users-request-3'>HTTP Users Request</h3>
+</span></code></pre></div><h2 id='insert-new-user'>Insert new User</h2><h3 id='http-users-request-3'>HTTP Users Request</h3>
+<p>With this request you can insert a new user.
+  <br></br>
+<code>POST https://api.talentgarden.com/v1/users</code></p>
+<h3 id='body-users-parameters'>Body Users Parameters</h3>
+<p>You can use this parameter to create new user.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>first_name</code></td>
+<td>mario</td>
+</tr>
+<tr>
+<td><code>last_name</code></td>
+<td>rossi</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>mariorossi@tag.it</td>
+</tr>
+<tr>
+<td><code>phone_prefix</code></td>
+<td>+39</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>3391029463</td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>1995-10-10</td>
+</tr>
+</tbody></table>
+<h3 id='attention'><em>Attention</em>:</h3>
+<p><strong>first_name</strong>, <strong>last_name</strong> and <strong>email</strong> are mandatory.</p>
+<h2 id='update-user-information'>Update User Information</h2><h3 id='http-users-request-4'>HTTP Users Request</h3>
 <p>With this request you can get all information about specific user.
   <br></br>
 <code>PATCH https://api.talentgarden.com/v1/users/:id</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/:id"</span> <span class="se">\</span>
       <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
-</code></pre></div><h3 id='body-users-parameters'>Body Users Parameters</h3>
+</code></pre></div><h3 id='body-users-parameters-2'>Body Users Parameters</h3>
 <p>You can use this parameter to update data of specific user.</p>
 
 <table><thead>
@@ -1123,9 +1182,9 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>123456#„«#“‘#789</td>
 </tr>
 </tbody></table>
-<h3 id='attention'><em>Attention</em>:</h3>
+<h3 id='attention-2'><em>Attention</em>:</h3>
 <p>to update user&#39;s passwords it is necessary that the email field is not present.</p>
-<h2 id='insert-device'>Insert Device</h2><h3 id='http-users-request-4'>HTTP Users Request</h3>
+<h2 id='insert-device'>Insert Device</h2><h3 id='http-users-request-5'>HTTP Users Request</h3>
 <p>With this request you can insert new user&#39;s device.
   <br></br>
 <code>POST https://api.talentgarden.com/v1/users/devices</code></p>
