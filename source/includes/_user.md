@@ -56,15 +56,16 @@ You can use this parameter to filter the users or you can sort them.
 Parameter | example | Description
 --------- | ------- | --------------
 `id` | 24 | Return only users with specified `id`.|
-`email` | mariorossi@tag.it | Return only user with speecified `email`.|
-`full_name` | mario rossi| Return only user with speecified `full_name`.|
-`only_with_phone` | true | return only users with phone_numebr different from null.|
-`sortby` | from | Return all bookings sorted by the fields of object.|
+`email` | mariorossi@tag.it | Return only user with specified `email`.|
+`full_name` | mario rossi| Return only user with specified `full_name`.|
+`only_with_phone` | true | return only users with phone_number different from null.|
+`sort_by` | from | Return all bookings sorted by the fields of object.|
+`sort_by_desc` | from | Return all bookings sorted by the fields of object. |
 
 ## Get Own User Information
 
 ### HTTP Users Request
-With this request you can get all informations about own user.  <br></br>
+With this request you can get all information about own user.  <br></br>
 `GET https://api.talentgarden.com/v1/users/me`
 
 ```shell
@@ -89,6 +90,27 @@ curl "https://api.talentgarden.com/v1/users/me" \
         "date_of_birth":"1984-08-28T00:00:00.000Z",
       }
 ```
+## Insert new User
+
+### HTTP Users Request
+With this request you can insert a new user.
+  <br></br>
+`POST https://api.talentgarden.com/v1/users`
+
+### Body Users Parameters
+You can use this parameter to create new user.
+
+Parameter | example | 
+--------- | ------- |
+`first_name` | mario | 
+`last_name` | rossi |
+`email` | mariorossi@tag.it| 
+`phone_prefix` | +39 | 
+`phone_number` | 3391029463 | 
+`date_of_birth` | 1995-10-10 |
+
+### *Attention*:
+**first_name**, **last_name** and **email** are mandatory.
 
 ## Update User Information
 
