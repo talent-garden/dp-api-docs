@@ -58,7 +58,7 @@ Parameter | example | Description
 `id` | 24 | Return only users with specified `id`.|
 `email` | mariorossi@tag.it | Return only user with specified `email`.|
 `full_name` | mario rossi| Return only user with specified `full_name`.|
-`only_with_phone` | true | return only users with phone_numebr different from null.|
+`only_with_phone` | true | return only users with phone_number different from null.|
 `sort_by` | from | Return all bookings sorted by the fields of object.|
 `sort_by_desc` | from | Return all bookings sorted by the fields of object. |
 
