@@ -135,8 +135,8 @@ Parameter | example |
 `phone_number` | 3391029463 | 
 `date_of_birth` | 1995-10-10 |
 
-### *Attention*:
-**first_name**, **last_name**, **email**, **phone_prefix** and **phone_number** are mandatory.
+##### Attention
+The fields **first_name**, **last_name**, **email**, **phone_prefix** and **phone_number** are mandatory.
 
 ## Update User
 
@@ -163,7 +163,7 @@ Parameter | example |
 `password` | 123456#„«#“‘#789 |
 
 ##### Attention
-to update user's passwords it is necessary that the email field is not present.
+To update user's passwords it is necessary that the email field is not present.
 
 
 ## Create Device
