@@ -250,24 +250,16 @@
                     <a href="#booking-object" class="toc-h2 toc-link" data-title="Booking Object">Booking Object</a>
                   </li>
                   <li>
-                    <a href="#get" class="toc-h2 toc-link" data-title="Get">Get</a>
+                    <a href="#get-bookings" class="toc-h2 toc-link" data-title="Get Bookings">Get Bookings</a>
                   </li>
                   <li>
-                    <a href="#get-by-id" class="toc-h2 toc-link" data-title="Get by ID">Get by ID</a>
+                    <a href="#get-booking-by-id" class="toc-h2 toc-link" data-title="Get Booking by ID">Get Booking by ID</a>
                   </li>
                   <li>
                     <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
-                      <ul class="toc-list-h3">
-                  <li>
-                    <a href="#http-request-3" class="toc-h3 toc-link" data-title="HTTP Request">HTTP Request</a>
                   </li>
                   <li>
-                    <a href="#body-parameters" class="toc-h3 toc-link" data-title="Body Parameters">Body Parameters</a>
-                  </li>
-              </ul>
-                  </li>
-                  <li>
-                    <a href="#delete-by-id" class="toc-h2 toc-link" data-title="Delete by ID">Delete by ID</a>
+                    <a href="#delete-booking-by-id" class="toc-h2 toc-link" data-title="Delete Booking by ID">Delete Booking by ID</a>
                   </li>
               </ul>
           </li>
@@ -300,10 +292,10 @@
                     <a href="#room-object" class="toc-h2 toc-link" data-title="Room Object">Room Object</a>
                   </li>
                   <li>
-                    <a href="#get" class="toc-h2 toc-link" data-title="Get">Get</a>
+                    <a href="#get-rooms" class="toc-h2 toc-link" data-title="Get Rooms">Get Rooms</a>
                   </li>
                   <li>
-                    <a href="#get-by-id" class="toc-h2 toc-link" data-title="Get by ID">Get by ID</a>
+                    <a href="#get-room-by-id" class="toc-h2 toc-link" data-title="Get Room by ID">Get Room by ID</a>
                   </li>
               </ul>
           </li>
@@ -314,16 +306,16 @@
                     <a href="#user-object" class="toc-h2 toc-link" data-title="User Object">User Object</a>
                   </li>
                   <li>
-                    <a href="#get" class="toc-h2 toc-link" data-title="Get">Get</a>
+                    <a href="#get-users" class="toc-h2 toc-link" data-title="Get Users">Get Users</a>
                   </li>
                   <li>
-                    <a href="#get-by-id" class="toc-h2 toc-link" data-title="Get by ID">Get by ID</a>
+                    <a href="#get-user-by-id" class="toc-h2 toc-link" data-title="Get User by ID">Get User by ID</a>
                   </li>
                   <li>
-                    <a href="#get-me" class="toc-h2 toc-link" data-title="Get Me">Get Me</a>
+                    <a href="#get-my-user" class="toc-h2 toc-link" data-title="Get My User">Get My User</a>
                   </li>
                   <li>
-                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                    <a href="#create-user" class="toc-h2 toc-link" data-title="Create User">Create User</a>
                       <ul class="toc-list-h3">
                   <li>
                     <a href="#attention" class="toc-h3 toc-link" data-title="<em>Attention</em>:"><em>Attention</em>:</a>
@@ -331,18 +323,10 @@
               </ul>
                   </li>
                   <li>
-                    <a href="#update" class="toc-h2 toc-link" data-title="Update">Update</a>
+                    <a href="#update-user" class="toc-h2 toc-link" data-title="Update User">Update User</a>
                   </li>
                   <li>
                     <a href="#create-device" class="toc-h2 toc-link" data-title="Create Device">Create Device</a>
-                      <ul class="toc-list-h3">
-                  <li>
-                    <a href="#http-users-request-6" class="toc-h3 toc-link" data-title="HTTP Users Request">HTTP Users Request</a>
-                  </li>
-                  <li>
-                    <a href="#body-device-parameters" class="toc-h3 toc-link" data-title="Body Device Parameters">Body Device Parameters</a>
-                  </li>
-              </ul>
                   </li>
                   <li>
                     <a href="#get-devices" class="toc-h2 toc-link" data-title="Get Devices">Get Devices</a>
@@ -467,7 +451,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>Date and time of last update.</td>
 </tr>
 </tbody></table>
-<h2 id='get'>Get</h2><h4 id='http-request'>HTTP Request</h4>
+<h2 id='get-bookings'>Get Bookings</h2><h4 id='http-request'>HTTP Request</h4>
 <p>With this request you can get all information about the all booking. <br></br>
 <code>GET https://api.talentgarden.com/v1/bookings</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/bookings"</span> <span class="se">\</span>
@@ -534,7 +518,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>Return all bookings sorted by the fields of object.</td>
 </tr>
 </tbody></table>
-<h2 id='get-by-id'>Get by ID</h2><h4 id='http-request-2'>HTTP Request</h4>
+<h2 id='get-booking-by-id'>Get Booking by ID</h2><h4 id='http-request-2'>HTTP Request</h4>
 <p>With this request you can get all information about specific book.  <br></br>
 <code>GET https://api.talentgarden.com/v1/bookings/:id</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/bookings/64"</span> <span class="se">\</span>
@@ -564,7 +548,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>The id of the book to retrieve.</td>
 </tr>
 </tbody></table>
-<h2 id='create'>Create</h2><h3 id='http-request-3'>HTTP Request</h3>
+<h2 id='create'>Create</h2><h4 id='http-request-3'>HTTP Request</h4>
 <p>With this request you can create a new book.  <br></br>
 <code>POST https://api.talentgarden.com/v1/bookings</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/bookings"</span> <span class="se">\</span>
@@ -584,7 +568,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
         </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-15T17:31:26.000Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-15T17:31:26.000Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='body-parameters'>Body Parameters</h3>
+</span></code></pre></div><h4 id='body-parameters'>Body Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -604,7 +588,7 @@ You must replace <code>YOUR_JWT</code> a valid Auth0 issued token.
 <td>booking finish date and time.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-by-id'>Delete by ID</h2><h4 id='http-request-4'>HTTP Request</h4>
+<h2 id='delete-booking-by-id'>Delete Booking by ID</h2><h4 id='http-request-4'>HTTP Request</h4>
 <p>With this request you can delete a book with specific id.  <br></br></p>
 
 <p><code>DELETE https://api.talentgarden.com/v1/bookings/:id</code></p>
@@ -1002,7 +986,7 @@ should provide a pagination mechanism. In this case this mechanism is this json 
 <td>Status of room</td>
 </tr>
 </tbody></table>
-<h2 id='get'>Get</h2><h4 id='http-rooms-request'>HTTP Rooms Request</h4>
+<h2 id='get-rooms'>Get Rooms</h2><h4 id='http-rooms-request'>HTTP Rooms Request</h4>
 <p>With this request you can get all information about the all rooms. <br></br>
 Return <strong><em>only available</em></strong> rooms <br></br> 
 <code>GET https://api.talentgarden.com/v1/rooms</code></p>
@@ -1080,7 +1064,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>Return only rooms with capacity 4.</td>
 </tr>
 </tbody></table>
-<h2 id='get-by-id'>Get by ID</h2><h4 id='http-rooms-request-2'>HTTP Rooms Request</h4>
+<h2 id='get-room-by-id'>Get Room by ID</h2><h4 id='http-rooms-request-2'>HTTP Rooms Request</h4>
 <p>With this request you can get all information about specific book.  <br></br>
 <code>GET https://api.talentgarden.com/v1/rooms/:id</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/rooms/119"</span> <span class="se">\</span>
@@ -1193,7 +1177,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>True if the user was deleted.</td>
 </tr>
 </tbody></table>
-<h2 id='get'>Get</h2><h4 id='http-users-request'>HTTP Users Request</h4>
+<h2 id='get-users'>Get Users</h2><h4 id='http-users-request'>HTTP Users Request</h4>
 <p>With this request you can get all information about the all users.<br></br> <strong>Only admin can use this endpoint</strong> <br></br>
 <code>GET https://api.talentgarden.com/v1/users</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users"</span> <span class="se">\</span>
@@ -1252,7 +1236,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 <td>Return all bookings sorted by full name in descending order.</td>
 </tr>
 </tbody></table>
-<h2 id='get-by-id'>Get by ID</h2><h4 id='http-users-request-2'>HTTP Users Request</h4>
+<h2 id='get-user-by-id'>Get User by ID</h2><h4 id='http-users-request-2'>HTTP Users Request</h4>
 <p>With this request you can get all information about user selected by id.  <br></br>
 <code>GET https://api.talentgarden.com/v1/users/22</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/22"</span> <span class="se">\</span>
@@ -1274,7 +1258,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
         </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2020-11-16T12:15:42.889Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='get-me'>Get Me</h2><h4 id='http-users-request-3'>HTTP Users Request</h4>
+</span></code></pre></div><h2 id='get-my-user'>Get My User</h2><h4 id='http-users-request-3'>HTTP Users Request</h4>
 <p>With this request you can get all information about own user.  <br></br>
 <code>GET https://api.talentgarden.com/v1/users/me</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/me"</span> <span class="se">\</span>
@@ -1296,7 +1280,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
         </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="s2">"2020-11-16T12:15:42.889Z"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"date_of_birth"</span><span class="p">:</span><span class="s2">"1984-08-28T00:00:00.000Z"</span><span class="p">,</span><span class="w">
       </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='create'>Create</h2><h4 id='http-users-request-4'>HTTP Users Request</h4>
+</span></code></pre></div><h2 id='create-user'>Create User</h2><h4 id='http-users-request-4'>HTTP Users Request</h4>
 <p>With this request you can insert a new user.
   <br></br>
 <code>POST https://api.talentgarden.com/v1/users</code></p>
@@ -1336,7 +1320,7 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 </tbody></table>
 <h3 id='attention'><em>Attention</em>:</h3>
 <p><strong>first_name</strong>, <strong>last_name</strong>, <strong>email</strong>, <strong>phone_prefix</strong> and <strong>phone_number</strong> are mandatory.</p>
-<h2 id='update'>Update</h2><h4 id='http-users-request-5'>HTTP Users Request</h4>
+<h2 id='update-user'>Update User</h2><h4 id='http-users-request-5'>HTTP Users Request</h4>
 <p>With this request you can get all information about specific user.
   <br></br>
 <code>PATCH https://api.talentgarden.com/v1/users/:id</code></p>
@@ -1378,14 +1362,14 @@ Return <strong><em>only available</em></strong> rooms <br></br>
 </tbody></table>
 <h4 id='attention-2'><em>Attention</em>:</h4>
 <p>to update user&#39;s passwords it is necessary that the email field is not present.</p>
-<h2 id='create-device'>Create Device</h2><h3 id='http-users-request-6'>HTTP Users Request</h3>
+<h2 id='create-device'>Create Device</h2><h4 id='http-users-request-6'>HTTP Users Request</h4>
 <p>With this request you can insert new user&#39;s device.
   <br></br>
 <code>POST https://api.talentgarden.com/v1/users/devices</code></p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.talentgarden.com/v1/users/devices"</span> <span class="se">\</span>
       <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_JWT"</span>
       <span class="nt">--data</span> <span class="s2">"token"</span>: <span class="s2">"sdkalsfkhalsfhjalncaukeab"</span>,<span class="s2">"manufacturer"</span>: <span class="s2">"OnePlus"</span>,<span class="s2">"mac_address"</span>: <span class="s2">"P1:28:57:13:J2:C4"</span>,<span class="s2">"model"</span>: <span class="s2">"ONEPLUS A5000"</span>,<span class="s2">"product"</span>: <span class="s2">"OnePlus5"</span>, <span class="s2">"platform"</span>: <span class="s2">"Android"</span><span class="o">}</span>
-</code></pre></div><h3 id='body-device-parameters'>Body Device Parameters</h3>
+</code></pre></div><h4 id='body-device-parameters'>Body Device Parameters</h4>
 <p>You can use this parameter to insert data of specific device.</p>
 
 <table><thead>
