@@ -16,7 +16,7 @@ An user object contain all of information of a user.
 | `update_at` |    timestamp with timezone  | Date and time of last update data user. |
 | `date_of_birth` | date | Date of birthday of the user. |
 | `deleted` | boolean | True if the user was deleted. |
-## Get
+## Get Users
 
 #### HTTP Users Request
 With this request you can get all information about the all users.<br></br> **Only admin can use this endpoint** <br></br>
@@ -59,7 +59,7 @@ Parameter | example | Description
 `sort_by` | email | Return all bookings sorted by email.|
 `sort_by_desc` | full_name | Return all bookings sorted by full name in descending order. |
 
-## Get by ID
+## Get User by ID
 
 #### HTTP Users Request
 With this request you can get all information about user selected by id.  <br></br>
@@ -88,7 +88,7 @@ curl "https://api.talentgarden.com/v1/users/22" \
       }
 ```
 
-## Get Me
+## Get My User
 
 #### HTTP Users Request
 With this request you can get all information about own user.  <br></br>
@@ -116,7 +116,7 @@ curl "https://api.talentgarden.com/v1/users/me" \
         "date_of_birth":"1984-08-28T00:00:00.000Z",
       }
 ```
-## Create
+## Create User
 
 #### HTTP Users Request
 With this request you can insert a new user.
@@ -138,7 +138,7 @@ Parameter | example |
 ### *Attention*:
 **first_name**, **last_name**, **email**, **phone_prefix** and **phone_number** are mandatory.
 
-## Update
+## Update User
 
 #### HTTP Users Request
 With this request you can get all information about specific user.
@@ -168,7 +168,7 @@ to update user's passwords it is necessary that the email field is not present.
 
 ## Create Device
 
-### HTTP Users Request
+#### HTTP Users Request
 With this request you can insert new user's device.
   <br></br>
 `POST https://api.talentgarden.com/v1/users/devices`
@@ -179,7 +179,7 @@ curl "https://api.talentgarden.com/v1/users/devices" \
       --data "token": "sdkalsfkhalsfhjalncaukeab","manufacturer": "OnePlus","mac_address": "P1:28:57:13:J2:C4","model": "ONEPLUS A5000","product": "OnePlus5", "platform": "Android"}
 ```
 
-### Body Device Parameters
+#### Body Device Parameters
 You can use this parameter to insert data of specific device.
 
 Parameter | example | 

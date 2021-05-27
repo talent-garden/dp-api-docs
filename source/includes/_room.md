@@ -16,7 +16,7 @@ An booking object contain all of information of a room.
 |`services`| json | Features room |
 |`available`| boolean | Status of room |
 
-## Get
+## Get Rooms
 
 #### HTTP Rooms Request
 With this request you can get all information about the all rooms. <br></br>
@@ -86,7 +86,7 @@ Parameter | example | Description
 |`campus_id` | 53 | Return only rooms with specified `campus_id`.|
 | `capacity` | 4 | Return only rooms with capacity 4.|
 
-## Get by ID
+## Get Room by ID
 
 #### HTTP Rooms Request
 With this request you can get all information about specific book.  <br></br>
