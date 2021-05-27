@@ -2,7 +2,7 @@
 ## Booking Object
 An booking object contain all of informations of a book.
 
-### Object Fields
+#### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `room_id` |    integer   |   Identify the room of the book.|
@@ -11,9 +11,9 @@ An booking object contain all of informations of a book.
 | `to` |    timestamp with timezone   |   Date and time of finish book. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
-## Get All Bookings
+## Get
 
-### HTTP Request
+#### HTTP Request
 With this request you can get all informations about the all booking. <br></br>
 `GET https://api.talentgarden.com/v1/bookings`
 
@@ -47,7 +47,7 @@ curl "https://api.talentgarden.com/v1/bookings" \
     ]
 }
 ```
-### Query Parameters
+#### Query Parameters
 You can use this parameter to filter the bookings or you can sort them.
 
 Parameter | example | Description
@@ -58,9 +58,9 @@ Parameter | example | Description
 `to`      | 2021-11-25T08:00:00.000Z | Return all bookings less or equal of parameter
 `sortby` | from | Return all bookings sorted by the fields of object.|
 
-## Get Booking by id
+## Get by id
 
-### HTTP Request
+#### HTTP Request
 With this request you can get all informations about specific book.  <br></br>
 `GET https://api.talentgarden.com/v1/bookings/:id`
 
@@ -83,7 +83,7 @@ curl "https://api.talentgarden.com/v1/bookings/64" \
 }
 ```
 
-### URL Parameters
+#### URL Parameters
 
 Parameter | Description
 --------- | -----------
@@ -91,7 +91,7 @@ id | The id of the book to retrieve.
 
 
 
-## Create new Book
+## Create
 
 ### HTTP Request
 With this request you can create a new book.  <br></br>
@@ -103,6 +103,8 @@ curl "https://api.talentgarden.com/v1/bookings" \
       -d {"room_id": "24","from": "2021-03-09T08:30:00.000Z","to": "2021-03-09T09:30:00.000Z"} \
       -H "Authorization: Bearer YOUR_JWT"
 ```
+> The above command returns JSON structured like this:
+
 ```json
 {
         "id": 75,
@@ -123,10 +125,10 @@ from | booking start date and time.
 to | booking finish date and time.
 
 
-## Delete a Specific Booking
+## Delete by ID
 
-### HTTP Request
-With this request you can delete a book witth specific id.  <br></br>
+#### HTTP Request
+With this request you can delete a book with specific id.  <br></br>
 
 `DELETE https://api.talentgarden.com/v1/bookings/:id`
 
@@ -135,7 +137,7 @@ curl "https://api.talentgarden.com/v1/bookings/64" \
       -X DELETE \
       -H "Authorization: Bearer YOUR_JWT"
 ```
-### URL Parameters
+#### URL Parameters
 
 Parameter | Description
 --------- | -----------

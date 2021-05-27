@@ -5,13 +5,13 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - Shell
 
 includes:
-  - pagination
   - authentication
   - booking
+  - errors
+  - event
+  - pagination
   - room
   - user
-  - event
-  - errors
 
 search: true
 
