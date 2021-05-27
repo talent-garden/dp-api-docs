@@ -11,7 +11,7 @@ An booking object contain all of information of a book.
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
 
-## Get
+## Get Bookings
 
 #### HTTP Request
 With this request you can get all information about the all booking. <br></br>
@@ -58,7 +58,7 @@ Parameter | example | Description
 `to`      | 2021-11-25T08:00:00.000Z | Return all bookings less or equal of parameter
 `sortby` | from | Return all bookings sorted by the fields of object.|
 
-## Get by ID
+## Get Booking by ID
 
 #### HTTP Request
 With this request you can get all information about specific book.  <br></br>
@@ -93,7 +93,7 @@ id | The id of the book to retrieve.
 
 ## Create
 
-### HTTP Request
+#### HTTP Request
 With this request you can create a new book.  <br></br>
 `POST https://api.talentgarden.com/v1/bookings`
 
@@ -117,7 +117,7 @@ curl "https://api.talentgarden.com/v1/bookings" \
 }
 ```
 
-### Body Parameters
+#### Body Parameters
 Parameter | Description
 --------- | -----------
 room_id | The id of the room to book.
@@ -125,7 +125,7 @@ from | booking start date and time.
 to | booking finish date and time.
 
 
-## Delete by ID
+## Delete Booking by ID
 
 #### HTTP Request
 With this request you can delete a book with specific id.  <br></br>
