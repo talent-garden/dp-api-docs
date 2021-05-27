@@ -162,7 +162,7 @@ Parameter | example |
 `phone_number` | 3391029463 | 
 `password` | 123456#„«#“‘#789 |
 
-#### *Attention*:
+##### Attention
 to update user's passwords it is necessary that the email field is not present.
 
 
