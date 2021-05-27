@@ -2,7 +2,7 @@
 ## User Object
 An user object contain all of informations of a user.
 
-### Object Fields
+#### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `id` |    integer   |   Identify the user. |
@@ -24,7 +24,7 @@ With this request you can get all informations about the all users.<br></br> **O
 `GET https://api.talentgarden.com/v1/users`
 
 ```shell
-curl "https://api.talentgarden.com/v1/bookings" \
+curl "https://api.talentgarden.com/v1/users" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 > The above command returns JSON structured like this:
@@ -58,9 +58,8 @@ Parameter | example | Description
 `id` | 24 | Return only users with specified `id`.|
 `email` | mariorossi@tag.it | Return only user with specified `email`.|
 `full_name` | mario rossi| Return only user with specified `full_name`.|
-`only_with_phone` | true | return only users with phone_number different from null.|
-`sort_by` | from | Return all bookings sorted by the fields of object.|
-`sort_by_desc` | from | Return all bookings sorted by the fields of object. |
+`sort_by` | email | Return all bookings sorted by email.|
+`sort_by_desc` | full_name | Return all bookings sorted by full name in descending order. |
 
 ## Get Own User Information
 
@@ -97,7 +96,7 @@ With this request you can insert a new user.
   <br></br>
 `POST https://api.talentgarden.com/v1/users`
 
-### Body Users Parameters
+### Body User Parameters
 You can use this parameter to create new user.
 
 Parameter | example | 
