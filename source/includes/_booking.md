@@ -91,7 +91,7 @@ id | The id of the book to retrieve.
 
 
 
-## Create
+## Create Booking
 
 #### HTTP Request
 With this request you can create a new book.  <br></br>
