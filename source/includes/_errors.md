@@ -21,31 +21,31 @@ Error Code | Meaning
 A typical error response is a JSON with many fields.
 
 ```shell
-curl "https://api.talentgarden.net/v1/events?organizer_id=error
+curl "https://api.talentgarden.com/v1/users?page=asdf&per_page=poasdf
 ```
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "errors": [
-    {
-      "value": "error",
-      "msg": "Must Be An Integer or multiple integers separated by comma",
-      "param": "organizer_id",
-      "location": "query"
-    }
-  ],
-  "statusCode": 400
+    "message": "Invalid parameters",
+    "details": [
+        {
+            "value": "poasdf",
+            "msg": "Must Be An Integer",
+            "param": "per_page",
+            "location": "query"
+        },
+        {
+            "value": "asdf",
+            "msg": "Must Be An Integer",
+            "param": "page",
+            "location": "query"
+        }
+    ]
 }
 ```
-
-
-
-
 Errors fields | Meaning
 ---------- | ---------
-Value | Is the value of parameter.
-msg | Error description.
-param |  Parameter's name.
-location | Type of parameter (e.g query, body, cookies, params, header).
-statusCode | Error Code.
+message | Error description.
+details | Object with more information
+code | Id to identified a spacial error, could not be present

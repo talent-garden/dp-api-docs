@@ -2,7 +2,6 @@
 ## Room Object
 An booking object contain all of information of a room.
 
-### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `campus_id` |    integer   |   Identify the campus of the room.|
@@ -17,10 +16,10 @@ An booking object contain all of information of a room.
 |`services`| json | Features room |
 |`available`| boolean | Status of room |
 
-## Get Rooms By Campus Id
+## Get
 
-### HTTP Rooms Request
-With this request you can get all information about the all rooms associate with specific campus. <br></br>
+#### HTTP Rooms Request
+With this request you can get all information about the all rooms. <br></br>
 Return ***only available*** rooms <br></br> 
 `GET https://api.talentgarden.com/v1/rooms`
 
@@ -79,7 +78,7 @@ curl "https://api.talentgarden.com/v1/rooms" \
     ]
 }
 ```
-### Query Rooms Parameters
+#### Query Rooms Parameters
 You can use this parameter to filter the bookings or you can sort them.
 
 Parameter | example | Description
@@ -87,9 +86,9 @@ Parameter | example | Description
 |`campus_id` | 53 | Return only rooms with specified `campus_id`.|
 | `capacity` | 4 | Return only rooms with capacity 4.|
 
-## Get Room by id
+## Get by ID
 
-### HTTP Rooms Request
+#### HTTP Rooms Request
 With this request you can get all information about specific book.  <br></br>
 `GET https://api.talentgarden.com/v1/rooms/:id`
 
@@ -124,7 +123,7 @@ curl "https://api.talentgarden.com/v1/rooms/119" \
 }
 ```
 
-### URL Rooms Parameters
+#### URL Rooms Parameters
 
 Parameter | Description
 --------- | -----------

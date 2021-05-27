@@ -1,26 +1,25 @@
 # Users
 ## User Object
-An user object contain all of informations of a user.
+An user object contain all of information of a user.
 
-#### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `id` |    integer   |   Identify the user. |
 | `auth0_id` | string |   Identify the user into auth0 system. |
-| `first_name` |  string | The firstname of the user. |
-| `last_name` |    string   |   The lastname of the user. |
-| `full_name` |    string   |   The fullname of the user. |
+| `first_name` |  string | The first name of the user. |
+| `last_name` |    string   |   The last name of the user. |
+| `full_name` |    string   |   The full name of the user. |
 | `email` |   string   |   The email of the user. |
 | `phone_prefix` |   string   |   The phone prefix of the user's number. |
-| `phone_number` |   integer   |   The phone number of th euser. |
+| `phone_number` |   integer   |   The phone number of th user. |
 | `created_at` | timestamp with timezone | Date and time of user creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update data user. |
 | `date_of_birth` | date | Date of birthday of the user. |
 | `deleted` | boolean | True if the user was deleted. |
-## Get All Users
+## Get
 
-### HTTP Users Request
-With this request you can get all informations about the all users.<br></br> **Only admin can use this endpoint** <br></br>
+#### HTTP Users Request
+With this request you can get all information about the all users.<br></br> **Only admin can use this endpoint** <br></br>
 `GET https://api.talentgarden.com/v1/users`
 
 ```shell
@@ -50,20 +49,48 @@ curl "https://api.talentgarden.com/v1/users" \
     ]
 }
 ```
-### Query Users Parameters
+#### Query Users Parameters
 You can use this parameter to filter the users or you can sort them.
 
 Parameter | example | Description
 --------- | ------- | --------------
-`id` | 24 | Return only users with specified `id`.|
 `email` | mariorossi@tag.it | Return only user with specified `email`.|
 `full_name` | mario rossi| Return only user with specified `full_name`.|
 `sort_by` | email | Return all bookings sorted by email.|
 `sort_by_desc` | full_name | Return all bookings sorted by full name in descending order. |
 
-## Get Own User Information
+## Get by ID
 
-### HTTP Users Request
+#### HTTP Users Request
+With this request you can get all information about user selected by id.  <br></br>
+`GET https://api.talentgarden.com/v1/users/22`
+
+```shell
+curl "https://api.talentgarden.com/v1/users/22" \
+      -H "Authorization: Bearer YOUR_JWT"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+        "id":"22",
+        "auth0_id":"auth0|123456789012345667",
+        "first_name":"Mario",
+        "last_name":"Rossi",
+        "full_name":"Mario Rossi",
+        "email":"mariorossi@tag.com",
+        "phone_prefix":"+39",
+        "phone_number":"2235641240",
+        "created_at":"2014-10-08T10:20:10.000Z",
+        "updated_at":"2020-11-16T12:15:42.889Z",
+        "date_of_birth":"1984-08-28T00:00:00.000Z",
+      }
+```
+
+## Get Me
+
+#### HTTP Users Request
 With this request you can get all information about own user.  <br></br>
 `GET https://api.talentgarden.com/v1/users/me`
 
@@ -89,14 +116,14 @@ curl "https://api.talentgarden.com/v1/users/me" \
         "date_of_birth":"1984-08-28T00:00:00.000Z",
       }
 ```
-## Insert new User
+## Create
 
-### HTTP Users Request
+#### HTTP Users Request
 With this request you can insert a new user.
   <br></br>
 `POST https://api.talentgarden.com/v1/users`
 
-### Body User Parameters
+#### Body User Parameters
 You can use this parameter to create new user.
 
 Parameter | example | 
@@ -109,11 +136,11 @@ Parameter | example |
 `date_of_birth` | 1995-10-10 |
 
 ### *Attention*:
-**first_name**, **last_name** and **email** are mandatory.
+**first_name**, **last_name**, **email**, **phone_prefix** and **phone_number** are mandatory.
 
-## Update User Information
+## Update
 
-### HTTP Users Request
+#### HTTP Users Request
 With this request you can get all information about specific user.
   <br></br>
 `PATCH https://api.talentgarden.com/v1/users/:id`
@@ -123,7 +150,7 @@ curl "https://api.talentgarden.com/v1/users/:id" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 
-### Body Users Parameters
+#### Body Users Parameters
 You can use this parameter to update data of specific user.
 
 Parameter | example | 
@@ -135,11 +162,11 @@ Parameter | example |
 `phone_number` | 3391029463 | 
 `password` | 123456#„«#“‘#789 |
 
-### *Attention*:
+#### *Attention*:
 to update user's passwords it is necessary that the email field is not present.
 
 
-## Insert Device
+## Create Device
 
 ### HTTP Users Request
 With this request you can insert new user's device.
@@ -166,14 +193,14 @@ Parameter | example |
 
 The **mac_address** parameter is **mandatory**
 
-## Get Devices Information
+## Get Devices
 
-### HTTP Devices Request
+#### HTTP Devices Request
 With this request you can get all information about own devices.  <br></br>
-`GET https://api.talentgarden.com/v1/users/devices`
+`GET https://api.talentgarden.com/v1/users/:id/devices`
 
 ```shell
-curl "https://api.talentgarden.com/v1/users/devices" \
+curl "https://api.talentgarden.com/v1/users/00000/devices" \
       -H "Authorization: Bearer YOUR_JWT"
 ```
 
@@ -183,7 +210,7 @@ curl "https://api.talentgarden.com/v1/users/devices" \
 [
       {
             "id": 1,
-            "user_id": "11152",
+            "user_id": "00000",
             "token": "sdkalsfkhalsfhjalncaukeabkcjv",
             "manufacturer": "Iphone XX",
             "mac_address": "c6:00:00:00:f2:c4",

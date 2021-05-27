@@ -1,8 +1,7 @@
 # Bookings
 ## Booking Object
-An booking object contain all of informations of a book.
+An booking object contain all of information of a book.
 
-#### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `room_id` |    integer   |   Identify the room of the book.|
@@ -11,10 +10,11 @@ An booking object contain all of informations of a book.
 | `to` |    timestamp with timezone   |   Date and time of finish book. |
 | `created_at` | timestamp with timezone | Date and time of book creation. |
 | `update_at` |    timestamp with timezone  | Date and time of last update. |
+
 ## Get
 
 #### HTTP Request
-With this request you can get all informations about the all booking. <br></br>
+With this request you can get all information about the all booking. <br></br>
 `GET https://api.talentgarden.com/v1/bookings`
 
 ```shell
@@ -53,15 +53,15 @@ You can use this parameter to filter the bookings or you can sort them.
 Parameter | example | Description
 --------- | ------- | --------------
 `room_id` | 24 or 24,25,26 | Return only bookings with specified `room_id` or multiple `room_id`.|
-`user_id` | 1 | Return only bookings with speecified `user_id`.|
+`user_id` | 1 | Return only bookings with specified `user_id`.|
 `from`    | 2021-11-25T08:00:00.000Z | Return all bookings grater or equal of parameter
 `to`      | 2021-11-25T08:00:00.000Z | Return all bookings less or equal of parameter
 `sortby` | from | Return all bookings sorted by the fields of object.|
 
-## Get by id
+## Get by ID
 
 #### HTTP Request
-With this request you can get all informations about specific book.  <br></br>
+With this request you can get all information about specific book.  <br></br>
 `GET https://api.talentgarden.com/v1/bookings/:id`
 
 ```shell
