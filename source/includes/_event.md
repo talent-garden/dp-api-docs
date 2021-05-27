@@ -1,8 +1,7 @@
 # Events
 ## Event Object
-An event object contain all of informations of a Talent Garden event.
+An event object contain all of information of a Talent Garden event.
 
-### Object Fields
 | Filed    |      Type      |  <div style="width:100%">Description</div> |
 |----------|---------------|------------|
 | `organizer_id` |    integer   |   Identify the creator of the event.|
@@ -23,7 +22,7 @@ An event object contain all of informations of a Talent Garden event.
 ## Get All Events
 
 #### HTTP Request
-With this request you can get all informations about the new talent garden events. <br></br>
+With this request you can get all information about the new talent garden events. <br></br>
 `GET https://api.talentgarden.net/v1/events`
 
 ```shell
